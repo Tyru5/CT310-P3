@@ -1,0 +1,15 @@
+/*table to host all the animal data*/
+
+DROP TABLE IF EXISTS animals;
+
+CREATE TABLE animals(
+       id INTEGER PRIMARY KEY ASC,
+       pet_image_path varchar(20),
+       pet_name varchar(15),
+       pet_species varchar(8),
+       pet_breed varchar(10),
+       pet_age int(3),
+       pet_description varchar(145),
+       pet_weight int(3),
+	   pet_comments varchar(1000)
+);

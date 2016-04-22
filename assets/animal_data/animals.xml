@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<animals>
+  <animal id="0" static_name="lilly_0">
+    <name>Lilly</name>
+    <description>Lilly is a cute pup.</description>
+    <image>
+      <src>lilly_0.png</src>
+      <origin><![CDATA[http://www.publicdomainpictures.net/view-image.php?image=24545&picture=smiling-dog]]></origin>
+      <rights>Public Domain</rights>
+    </image>
+    <comments>
+      <comment id="0">
+        <user>NSA</user>
+        <date>1456877947</date>
+        <text>We're watching you Lilly.</text>
+      </comment>
+      <comment id="1">
+        <user>Ianb</user>
+        <date>1456877997</date>
+        <text>How cute!</text>
+      </comment>
+      <comment id="2">
+        <user>NSA</user>
+        <date>1456884851</date>
+        <text>THIS IS AN XSS ATTACK!&#xD;
+&#xD;
+  Email:&#xD;
+  &#xD;
+  &#xD;
+  password:&#xD;
+  &#xD;
+&#xD;
+&#xD;
+~`!@#$%^&amp;*()_+{}|:"?-=[]\;',./</text>
+      </comment>
+      <comment id="3">
+        <user>ianb</user>
+        <date>1456941109</date>
+        <text>Silly NSA, xss attacks wont happen here!</text>
+      </comment>
+    </comments>
+  </animal>
+  <animal id="1" static_name="Mr_Sir_Fluffers_the_Fourty_Fifth">
+    <name>Mr. Sir Fluffers the Fourty-Fifth</name>
+    <description>Once you pet Mr. Sir Fluffers the Fourty-Fifth, you will be smitten.</description>
+    <image>
+      <src>MSFtFF_0.jpg</src>
+      <origin><![CDATA[http://www.publicdomainpictures.net/view-image.php?image=42754&picture=cat-looking-up]]></origin>
+      <rights>Public Domain</rights>
+    </image>
+    <comments>
+      <comment id="0">
+        <user>NSA</user>
+        <date>1456877947</date>
+        <text>We're watching you Mr. Sir Fluffers the Fourty-Fifth.</text>
+      </comment>
+    </comments>
+  </animal>
+  <animal id="2" static_name="Snuzzlewumpskin">
+    <name>Snuzzlewumpskin</name>
+    <description>Ive run out of things to say about cute animals.</description>
+    <image>
+      <src>Snuzzlewumpskin.jpeg</src>
+      <origin><![CDATA[http://www.publicdomainpictures.net/view-image.php?image=140753&picture=comfortable-cat]]></origin>
+      <rights>Public Domain</rights>
+    </image>
+    <comments>
+      <comment id="0">
+        <user>NSA</user>
+        <date>1456888383</date>
+        <text>Maybe I should log out of our super secret NSA backdoor before posting these comments...</text>
+      </comment>
+    </comments>
+  </animal>
+</animals>

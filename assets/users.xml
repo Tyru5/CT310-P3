@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <user>
+    <user_name>ianb</user_name>
+    <password_hash>$2a$10$YmGeX.oG1aunw45LMqoCH.PJRNjN6lTCnJN9cAEiX.SKILTFLaVEe</password_hash>
+  </user>
+  <user>
+    <user_name>ct310</user_name>
+    <password_hash>$2a$10$oFNR0YCkkeE9BxCknANkbeBYPU0UmVI.WzW6aC4gc.pwhJcfdzCTG</password_hash>
+  </user>
+  <user>
+    <user_name>mateus</user_name>
+    <password_hash>$2a$10$er8YZiqIJrlw799StoVmyeyY/jw62.c/Aiiz7R0FjkUX0pQuNDT/q</password_hash>
+  </user>
+  <user>
+      <user_name>tyrusm</user_name>
+      <password_hash>$2a$10$YmGeX.oG1aunw45LMqoCH.PJRNjN6lTCnJN9cAEiX.SKILTFLaVEe</password_hash>
+  </user>
+</users>

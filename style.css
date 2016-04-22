@@ -1,0 +1,344 @@
+@CHARSET "UTF-8";
+/*
+Tyrus  Malmstrom and Ian Bertolacci									Feb 24th ,2016
+this is the css for the welcome page for our project 1
+*/
+
+body{
+    -webkit-text-size-adjust: 100%;
+	background-size: cover;
+    /*For the Google Fair Play font*/
+    font-family: 'Open Sans Condensed', sans-serif;
+	margin: 0px;
+}
+
+header{
+	text-align: center;
+	padding: 4px 0px 4px 0px;/*top, right, bottom, left*/
+}
+
+header h1, h2, h3, h4 {/* falls under any of these specifications */
+	margin: 0px;
+	text-shadow: 0.05em 0.05em #C4C4C4;
+}
+
+nav {
+	padding: 4px 0px 4px 0px;
+	border-bottom: 3px solid #EDEDED;
+}
+ nav a {
+     padding: 1px 10px 1px 10px;
+ }
+
+.pageContents a {
+    text-decoration: none;
+    color: #2e3436;
+}
+
+.pageContents a:hover, a:active {
+	color: #4A7023;
+    font-weight: bold;
+}
+
+.pageContents a:visited {
+    color: #7e2586;
+}
+
+.about_PageContents a {
+    text-decoration: none;
+    color: #2e3436;
+}
+
+.about_PageContents a:hover, a:active {
+	color: #4A7023;
+    font-weight: bold;
+}
+
+.abot_PageContents a:visited {
+    color: #BAE4F0;
+}
+
+img.animalImg {
+  width: 100px;
+  height: 100px;
+  border-style: groove;
+  border-radius: 15px;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+/*Assignment 2 styling*/
+.animalPhoto {
+  border-style: groove;
+  border-radius: 15px;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+ul.animalEntry { /*Type of display for the list*/
+  list-style-type: circle;
+}
+
+p.imgDisclaimer {
+  font-family: monospace;
+  font-size: .6em;
+  margin-left: 12px;
+}
+
+a.imgSource {
+    text-decoration: underline;
+}
+
+a.animalView {
+    text-decoration: underline;
+    margin-left: 12px;
+}
+
+/*Sytling for the about.php file*/
+.about_us_header {
+    border-top: 2px solid #EDEDED;
+    border-bottom: 2px solid #EDEDED;
+    background-color: #ADD8E6;
+    padding: 10px;
+}
+
+#abtUsText {
+    margin-left: 25px;
+}
+
+.about_PageContents {
+    margin: 0 auto;
+    max-width: 1032px;
+}
+
+footer a {
+    color: #2e3436;
+}
+
+footer a:hover, a:active {
+	color: #4A7023;
+    font-weight: bold;
+}
+
+#footer {
+    text-align: center;
+    border-top: 3px solid #EDEDED;
+    clear: both;
+}
+
+.auth_imag {
+    width: 100px; /*defualt viewing for now, can change it later*/
+    height: 100px;
+    margin-top: 2%;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+.welcome_imgFrmt {
+    width: 240px;
+    height: 240px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+#main_animal_wrapper {
+    margin-left: 25%;
+}
+
+.frmt {
+    float: left;
+    padding-right: 5px;
+    padding-bottom: 15px; /*Used for spacing the images and the footer bar*/
+}
+
+#pageIntro {
+    text-align: center;
+}
+
+#imageCaption {
+    text-align: center;
+}
+
+/*All the styling for the login page*/
+.login_message {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    border-style: groove;
+    margin: 0 auto;
+    margin-top: 2%;
+    border-radius: 4px;
+    width: 340px;
+    background-color: #ccffcc;
+}
+
+.logout_message {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    border-style: groove;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 4px;
+    width: 340px;
+    background-color: #ccffcc;
+}
+
+form {
+    padding: 10px 0px 10px 0px;
+}
+
+input[type=submit]{ /*button for the 'post' comment*/
+    margin-top: 15px;
+    font-size: 14px;
+    height: 30px;
+    color: #fff;
+    background-color: #6495ED;
+    font-weight: bold;
+    border: 2px solid #696969;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/*All styling for the animal commetns section*/
+#AnimalComments {
+    width: 25%;
+    margin-left: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 15px 0 rgba(255, 255, 255, .5);
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+}
+
+#commentHeader {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.comments {
+    margin-left: 5px;
+}
+
+#go_back {
+    margin-left: 12px;
+    text-decoration: underline;
+}
+
+
+/*ALL STYLING FOR PROJECT 2*/
+/*styling for the create account section*/
+.create_account {
+    text-align: center;
+    border: 1px solid #d8dee2;
+    margin: 0 auto;
+    padding: 15px 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 340px;
+    margin-bottom: 2%;
+}
+
+#create_account_link {
+    color: #4078c0;
+    text-decoration: none;
+}
+
+.setup_createAccount_header {
+    margin-left: 40%;
+}
+
+/*ALL STYLING FOR THE APPLICATION FORM*/
+.create_account_form {
+    border: 1px solid #d8dee2;
+    margin: 0 auto;
+    padding: 15px 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 340px;
+    background-color: #ccffcc;
+}
+
+.form_divs { /* Exampled from this site: https://css-tricks.com/examples/hrs/*/
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.frmt_area input {
+    width: 100%;
+    clear: both;
+}
+
+.frmt_prior_pets {
+    /*text-align: center;*/
+}
+
+.frmt_response textarea {
+    width: 95%;
+}
+
+#fmp a {
+    color: #4078c0;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.forgot_password_heading {
+	text-align: center;
+}
+
+.forgot_password_form {
+	border: 1px solid #d8dee2;
+    margin: 0 auto;
+    padding: 15px 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 340px;
+    background-color: #ccffcc;
+    text-align: center;
+}
+
+#forgot_password_pic {
+	border-radius: 15px;
+}
+
+.password_reset_form {
+	border: 1px solid #d8dee2;
+    margin: 0 auto;
+    padding: 15px 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 340px;
+    background-color: #ccffcc;
+    text-align: center;
+}
+
+.notificationS {
+	text-align: center;
+	color: red;
+	font-weight: bold;
+}
+
+.notificationG {
+	text-align: center;
+	color: #4078c0;
+	font-weight: bold;
+}
+
+#livesearch {
+    width: 200px;
+    margin-left: 10px;
+}
+
+#search_animal {
+    margin-left: 10px;
+}
