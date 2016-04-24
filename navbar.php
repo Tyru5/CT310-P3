@@ -7,5 +7,6 @@
 	  <a href="adoption.php">Add pet for adoption</a> |
       <a href="about.php">About Us</a>  |
       <a href="login.php">Login</a>  |
+      <a href="status.php">Status</a>
   </nav>
   </header>
