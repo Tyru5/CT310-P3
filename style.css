@@ -344,11 +344,61 @@ input[type=submit]{ /*button for the 'post' comment*/
 }
 
 /*ALL styling for project 3*/
-#status_table {
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  text-align: center;
+.status_table {
+    margin-left: auto;
+    margin-right: auto;
+	width:40%;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #000000;
+    margin-bottom: 25px;
+}
+
+.status_table tr:nth-child(odd){
+    background-color:#89c6ff;
+}
+.status_table tr:nth-child(even){
+     background-color:#ffffff;
+}
+
+.status_table td{
+	vertical-align:middle;
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:8px;
+	font-size:14px;
+	font-family:Courier;
+	font-weight:bold;
+	color:#000000;
+}
+.status_table tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}
+.status_table tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}
+.status_table tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+
+.status_table tr:first-child td{
+	background:-o-linear-gradient(bottom, #003f7f 5%, #003f7f 100%);
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #003f7f), color-stop(1, #003f7f) );
+	background:-moz-linear-gradient( center top, #003f7f 5%, #003f7f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#003f7f", endColorstr="#003f7f");	background: -o-linear-gradient(top,#003f7f,003f7f);
+	background-color:#003f7f;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Courier;
+	font-weight:bold;
+	color:#ffffff;
+}
+
+.status_table tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #003f7f 5%, #003f7f 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #003f7f), color-stop(1, #003f7f) );
+	background:-moz-linear-gradient( center top, #003f7f 5%, #003f7f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#003f7f", endColorstr="#003f7f");	background: -o-linear-gradient(top,#003f7f,003f7f);
+	background-color:#003f7f;
 }

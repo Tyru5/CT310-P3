@@ -27,11 +27,11 @@
 
 
     <!--Table for displaying the status's of all the other pages-->
-    <table border="1" id="status_table">
+    <table class="status_table">
         <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
+            <th>Site Name</th>
+            <th>Page Awake?</th>
+            <th>Page Pet Listing</th>
         </tr>
         <tr>
             <td>Eve</td>
