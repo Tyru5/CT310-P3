@@ -11,6 +11,7 @@
       require_once 'lib/database.php'; // require all database code.
     ?>
 
+    <!--javaScript to handle the AJAX call to the masterAPI hosted php page -->
     <script type="text/javascript">
 	   window.onload = masterAPI;
     </script>
