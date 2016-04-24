@@ -8,4 +8,5 @@ $res = $animalQuery->fetchAll();
 
 echo json_encode($res);
 
+
 ?>
