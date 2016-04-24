@@ -34,9 +34,14 @@
             <th>Page Pet Listing</th>
         </tr>
         <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
+            <td>Pet Rescue</td>
+            <td>Down</td>
+            <td>Temp..</td>
+        </tr>
+        <tr>
+            <td>Pet Rescue</td>
+            <td>Down</td>
+            <td>Temp..</td>
         </tr>
     </table>
 
