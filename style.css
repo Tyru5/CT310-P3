@@ -342,3 +342,13 @@ input[type=submit]{ /*button for the 'post' comment*/
 #search_animal {
     margin-left: 10px;
 }
+
+/*ALL styling for project 3*/
+#status_table {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-align: center;
+}
