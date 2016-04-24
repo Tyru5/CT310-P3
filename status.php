@@ -12,6 +12,7 @@
     ?>
 
     <!--javaScript to handle the AJAX call to the masterAPI hosted php page -->
+    <script type="text/javascript" src="masterAPI.js"></script>
     <script type="text/javascript">
 	   window.onload = masterAPI;
     </script>
