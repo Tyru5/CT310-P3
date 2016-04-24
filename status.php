@@ -12,8 +12,7 @@
     ?>
   </head>
   <body>
-      <!--Establishing connection to the database -->
-      <?php if( !$dbh = setup_UserDb_Connection() ) { die(); }?>
+      
       <div class="pageContents">
 
     <?php
