@@ -10,6 +10,11 @@
       include 'login_tools.php';
       require_once 'lib/database.php'; // require all database code.
     ?>
+
+    <script type="text/javascript">
+	   window.onload = masterAPI;
+    </script>
+
   </head>
   <body>
 
@@ -25,23 +30,12 @@
         <h1>Status:</h1>
     </div>
 
-
     <!--Table for displaying the status's of all the other pages-->
-    <table class="status_table">
+    <table id="status_table">
         <tr>
             <th>Site Name</th>
             <th>Page Awake?</th>
             <th>Page Pet Listing</th>
-        </tr>
-        <tr>
-            <td>Pet Rescue</td>
-            <td>Down</td>
-            <td>Temp..</td>
-        </tr>
-        <tr>
-            <td>Pet Rescue</td>
-            <td>Down</td>
-            <td>Temp..</td>
         </tr>
     </table>
 
