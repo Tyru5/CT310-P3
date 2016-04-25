@@ -36,8 +36,8 @@
     <table id="status_table">
         <tr>
             <th>Site Name</th>
-            <th>Page Awake?</th>
-            <th>Page Pet Listing</th>
+            <th>Page Awake URL</th>
+            <th>Page Pet Listing URL</th>
         </tr>
     </table>
 
