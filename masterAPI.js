@@ -1,7 +1,6 @@
 // Tyrus Malmstrom
 //All code to handle the ajax call to the masterAPI page:
 
-
 var vurl = 'https://www.cs.colostate.edu/~ct310/yr2016sp/more_assignments/project03masterlist.php'; // page that has the master List
 var http = false;
 
@@ -19,21 +18,27 @@ function getStatus() {
 		if (http.readyState == 4 && http.status == 200) {
 			status = JSON.parse( http.responseText );
 			console.log(status);
-			statusToTable(status);
+			statusToTable( status );
 		}
 	}
 	http.send( null );
 }
+
 function statusToTable(status) {
 	var tab = document.getElementById('status_table');
 	var i = tab.rows.length;
 	for (j = 0; j < status.length; j++) {
-		var rt = "<tr> <td>" + status[j].siteName + "</td> <td>" + status[j].awakeURL
+		var rt = "<tr> <td>" + status[j].siteName + "</td> <td class=\"statusColor\">" + status[j].awakeURL
 				+ "</td> <td>" + status[j].petsListURL + "</td></tr>";
 		var rr = tab.insertRow(i);
 		rr.innerHTML = rt;
 	}
+	$('.statusColor:contains("up")').css('background-color', 'green');
+	$('.statusColor:contains("down")').css('background-color', 'yellow');
+	$('.statusColor:contains("error")').css('background-color', 'red');
+	$('.statusColor:contains("Temporary")').css('background-color', 'hotpink');
 }
+
 function masterAPI() {
 	getStatus();
 }
