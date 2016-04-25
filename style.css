@@ -350,7 +350,7 @@ input[type=submit]{ /*button for the 'post' comment*/
 	width:40%;
 	box-shadow: 10px 10px 5px #888888;
 	border:1px solid #000000;
-    margin-bottom: 25px;
+    margin-bottom: 55px;
 }
 
 #status_table tr:nth-child(odd){
