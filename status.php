@@ -38,6 +38,7 @@
             <th>Site Name</th>
             <th>Page Awake URL</th>
             <th>Page Pet Listing URL</th>
+            <th>Status</th>
         </tr>
     </table>
 

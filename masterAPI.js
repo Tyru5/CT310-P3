@@ -28,15 +28,22 @@ function statusToTable(status) {
 	var tab = document.getElementById('status_table');
 	var i = tab.rows.length;
 	for (j = 0; j < status.length; j++) {
-		var rt = "<tr> <td>" + status[j].siteName + "</td> <td class=\"statusColor\">" + status[j].awakeURL
-				+ "</td> <td>" + status[j].petsListURL + "</td></tr>";
+		var rt = "<tr> <td>" + status[j].siteName + "</td> <td>" + status[j].awakeURL
+				+ "</td> <td>" + status[j].petsListURL + "</td> <td class=\"statusColor\"></td></tr>";
 		var rr = tab.insertRow(i);
 		rr.innerHTML = rt;
+		update_status( status[j].awakeURL );
 	}
-	$('.statusColor:contains("up")').css('background-color', 'green');
-	$('.statusColor:contains("down")').css('background-color', 'yellow');
-	$('.statusColor:contains("error")').css('background-color', 'red');
-	$('.statusColor:contains("Temporary")').css('background-color', 'hotpink');
+}
+
+function update_status( siteStatus ){
+	if( siteStatus[j].awakeURL == "up"){
+		$('.statusColor').css('background-color', 'green');
+	}else if( siteStatus[j].awakeURL == "down" ){
+		$('.statusColor').css('background-color', 'yellow');
+	}else{
+		$('.statusColor').css('background-color', 'red');
+	}
 }
 
 function masterAPI() {

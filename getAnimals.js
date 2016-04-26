@@ -15,9 +15,7 @@ function processAnimals(){
           // cheking the state of the ajax object:
           if( request.readyState == 4 && request.status == 200){ // More info here: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
             status = JSON.parse( request.responseText );
-            console.log(status);
-            // this is just for me to see if this works.
-            printOutAnimals( status );
+            // console.log(status);
           }
       }
       request.send( null );
@@ -25,12 +23,6 @@ function processAnimals(){
 
 function init(){
   processAnimals();
-}
-
-function printOutAnimals( status ){
-  for (j = 0; j < status.length; j++) {
-    console.log(status[j].petName);
-  }
 }
 
 function ajax_request(){

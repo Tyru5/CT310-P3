@@ -42,7 +42,7 @@
     <!--AJAX for processing petList data -->
     <script type="text/javascript" src="getAnimals.js"></script>
     <script type="text/javascript">
-      window.onload = init;
+      window.onload = init; // function that calls processAnimals()
     </script>
 
   </head>
