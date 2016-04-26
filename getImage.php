@@ -11,7 +11,7 @@ $animalQuery = $dbh->query("SELECT pet_image_path FROM animals WHERE id= '$id'")
 $res = $animalQuery->fetchColumn();
 
 $fp = fopen("$res", 'rb'); // this allows for the dynamic path to the image.
-$str = file_get_contents($name, FILE_USE_INCLUDE_PATH);
+$str = file_get_contents($fp, FILE_USE_INCLUDE_PATH);
 echo base64_encode($str);
 exit;
 ?>

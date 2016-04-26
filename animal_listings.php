@@ -101,5 +101,6 @@
 
     </div>
     <?php include 'footer.php'; ?>
+    <div id="test"></div>
   </body>
 </html>

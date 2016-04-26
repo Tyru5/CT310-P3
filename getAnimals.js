@@ -26,14 +26,46 @@ function ajax_request(){
     return request;
 }
 
-function pprint( status ){
-  for(animal in status){
-    console.log( "Hello " + status[animal].imageURL );
+// function to create img DOM object:
+function img_create(src, alt, title, clazz, width, height) {
+    var img = document.createElement('img');
+    img.src= src;
+    img.className = clazz;
+    img.width = width;
+    img.height = height;
+    if (alt!=null) img.alt= alt;
+    if (title!=null) img.title= title;
+    img.onload = function(){
+      img.src = src;
+      $(".picyo").html(img);
+    }
+}
+
+// function to create the list for each animal:
+function create_list( status ){
+  var str = '<ul class=animalEntry>';
+  for(var i in status){
+    var img = img_create("assets/uploadsimageslilly_0.png", "image of animal", ":)", "animalImg", 300, 300);
+    str +='<li class="picyo">' + img + '</li>' +
+          '<li>' + status[i].petName + '</li>' +
+          '<li><a href=' + status[i].imageURL + '>Click here to view</a></li>' +
+          '<li>' + status[i].petKind   + '</li>'+
+          '<li>' + status[i].breed   + '</li>'  +
+          '<li>' + status[i].datePosted + '</li>' +
+          '<li>' + status[i].descURL   + '</li><br>';
   }
+  str += '</ul>';
+  $('.pageContents').append(str); //yes!
+}
+
+
+function pprint( status ){
+  // going to use javascript to create DOM elements:
+  create_list(status);
 }
 
 function processAnimals(){
-  var status; // wow! this is weird, i don't know why I have to do this.
+    var status; // wow! this is weird, i don't know why I have to do this.
     // function that will display the image using ajax:
     // always since, I'm using the $_GET method to pass data, I will generate a random 'key' that will not allow the browser to cache the data.
     var nocache = "&nocache=" + Math.random() * 1000000;
