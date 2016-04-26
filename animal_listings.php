@@ -7,7 +7,7 @@
       $title = "Adopt";
       $session_name = "PetRescue_Malmstrom_Bertolacci";
       include 'header.php';
-	  include 'lib/database.php';
+	    include 'lib/database.php';
       include "animal_tools.php";
     ?>
     <!--All code for the AJAX call to the database-->
@@ -38,6 +38,13 @@
         xmlhttp.send(null);
     }
     </script>
+
+    <!--AJAX for processing petList data -->
+    <script type="text/javascript" src="getAnimals.js"></script>
+    <script type="text/javascript">
+      window.onload = init;
+    </script>
+
   </head>
   <body>
     <div class="pageContents"> <!-- Will hold all the page contents -->
