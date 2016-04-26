@@ -28,7 +28,7 @@ function ajax_request(){
 
 function pprint( status ){
   for(animal in status){
-    console.log( "Hello " + status[animal].petName );
+    console.log( "Hello " + status[animal].imageURL );
   }
 }
 
