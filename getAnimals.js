@@ -3,28 +3,6 @@
 
 var url = "http://www.cs.colostate.edu/~tmalmst/CT310-P3/petList.php";
 
-function processAnimals(){
-  var status; // wow! this is weird, i don't know why I have to do this.
-    // function that will display the image using ajax:
-    // always since, I'm using the $_GET method to pass data, I will generate a random 'key' that will not allow the browser to cache the data.
-    var nocache = "&nocache=" + Math.random() * 1000000;
-    request = new ajax_request();
-
-      request.open("GET",url, true); // boolean value defaults to true if you want to send async.
-      request.onreadystatechange = function() {
-          // cheking the state of the ajax object:
-          if( request.readyState == 4 && request.status == 200){ // More info here: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-            status = JSON.parse( request.responseText );
-            // console.log(status);
-          }
-      }
-      request.send( null );
-}
-
-function init(){
-  processAnimals();
-}
-
 function ajax_request(){
     // depending on the web browser you are using, return the correct ajax object:
     // doing this so that my code can work across all (most) platforms:
@@ -46,4 +24,33 @@ function ajax_request(){
         }
     }
     return request;
+}
+
+function pprint( status ){
+  for(animal in status){
+    console.log( "Hello " + status[animal].petName );
+  }
+}
+
+function processAnimals(){
+  var status; // wow! this is weird, i don't know why I have to do this.
+    // function that will display the image using ajax:
+    // always since, I'm using the $_GET method to pass data, I will generate a random 'key' that will not allow the browser to cache the data.
+    var nocache = "&nocache=" + Math.random() * 1000000;
+    request = new ajax_request();
+
+      request.open("GET",url, true); // boolean value defaults to true if you want to send async.
+      request.onreadystatechange = function() {
+          // cheking the state of the ajax object:
+          if( request.readyState == 4 && request.status == 200){ // More info here: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+            status = JSON.parse( request.responseText );
+            // console.log(status);
+            pprint( status );
+          }
+      }
+      request.send( null );
+}
+
+function init(){
+  processAnimals();
 }
