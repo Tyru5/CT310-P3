@@ -60,12 +60,12 @@
           <div id="livesearch"></div>
       </form>
       <?php
-		$db = new database();
+		/*$db = new database();
 	  $result = $db->query('SELECT * FROM animals');
 
 		foreach($result as $row)
-		{?>
-			<p>
+		{*/?>
+			<!--<p>
 			<img class="animalImg" src="<?php echo $row['pet_image_path'];?>" width="300px" height="300px" /><br>
       <ul class="animalEntry">
 		      <li>Name: <?php echo $row['pet_name'];?></li>
@@ -77,9 +77,9 @@
 			    <li><a href=<?php echo 'animal_view.php?id='. $row['id']; ?> >Click here to view</a></li>
         </ul>
 			</p>
-			<hr>
+			<hr>-->
 		<?php
-		}
+		//}
 	  /*
         $animal_tree = new AnimalTree( $ANIMALS_FILE );
 

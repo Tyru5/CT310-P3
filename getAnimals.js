@@ -43,14 +43,13 @@ function img_create(src, alt, title, clazz, width, height) {
 
 // function to create the list for each animal:
 function create_list( status ){
+  var nameOfDog = "Name: ";
+  var datePosted = "Date Posted: ";
   var str = '<ul class=animalEntry>';
   for(var i in status){
-    str +='<li>' + status[i].petName + '</li>' +
-          '<li><a href=' + status[i].imageURL + '>Click here to view Pet!</a></li>' +
-          '<li>' + status[i].petKind   + '</li>'+
-          '<li>' + status[i].breed   + '</li>'  +
-          '<li>' + status[i].datePosted + '</li>' +
-          '<li><a href=' + status[i].descURL   + '>Click here to view the description</a></li><br>';
+    str +='<li>' + nameOfDog +status[i].petName + '</li>' +
+          '<li>' + datePosted + status[i].datePosted + '</li>' +
+          '<li><a href=' + status[i].imageURL + '>Click here to view Pet!</a></li><br>';
   }
   str += '</ul>';
   $('.pageContents').append(str); //yes!
