@@ -3,7 +3,10 @@
 
 var vurl = 'https://www.cs.colostate.edu/~ct310/yr2016sp/more_assignments/project03masterlist.php'; // page that has the master List
 var http = false;
-var request_awake = false;
+// var request_awake = false;
+
+// creating our site into a JSON object: for testing
+var our_siteJSONobj = { "siteName":"tyru5Dan::Pet_Rescue", "awakeURL":"http://www.cs.colostate.edu/~tmalmst/CT310-P3/awake.php", "petsListURL":"http://www.cs.colostate.edu/~tmalmst/CT310-P3/petList.php" };
 
 function ajax_request(){
     // depending on the web browser you are using, return the correct ajax object:
@@ -28,6 +31,7 @@ function ajax_request(){
     return request;
 }
 
+
 function getStatus() {
 	var status;
 	http = new ajax_request();
@@ -35,6 +39,8 @@ function getStatus() {
 	http.onreadystatechange = function() {
 		if (http.readyState == 4 && http.status == 200) {
 			status = JSON.parse( http.responseText );
+			// adding my site into the array:
+			status[0] = our_siteJSONobj;
 			console.log( status );
 			statusToTable( status );
 		}
@@ -46,6 +52,7 @@ function getStatus() {
 function statusToTable(status) {
 	var tab = document.getElementById('status_table');
 	var i = tab.rows.length;
+	console.log("The length of the status is = " + status.length);
 	for (j = 0; j < status.length; j++) {
 		var rt = "<tr> <td>" + status[j].siteName + "</td> <td>" + status[j].awakeURL
 				+ "</td> <td>" + status[j].petsListURL + "</td> <td class=\"statusColor\"></td></tr>";
@@ -55,8 +62,9 @@ function statusToTable(status) {
 	}
 }
 
-function update_status( siteStatus , numRows){
-	request_awake = new ajax_request();
+function update_status( siteStatus , numRows){ // this will do a cross-domain request... need to do something about this.. issues will arise.
+	var request_awake = new ajax_request();
+	console.log(request_awake);
 	var awake_url = siteStatus;
 	var response;
 	console.log("The awake url is = " + awake_url);
