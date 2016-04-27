@@ -1,8 +1,14 @@
 <?php
 // CODE given to us by Professor and GTA, thank you. 4/25/2016
 header("Access-Control-Allow-Origin: *");
-$fp = fopen("imageFileName.png", 'rb');
-$str = file_get_contents($name, FILE_USE_INCLUDE_PATH);
-echo base64_encode($str);
+
+//code that connects to the database to get the correct Id for that image:
+include 'lib/database.php';
+$id = $_GET['petId'];
+$dbh = new database();
+
+$animalQuery = $dbh->query("SELECT pet_description FROM animals WHERE id= '$id'");
+$res = $animalQuery->fetchColumn();
+echo $res;
 exit;
 ?>
