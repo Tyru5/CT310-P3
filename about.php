@@ -49,7 +49,7 @@
               </p>
           </div>
           <h3>Mateus Rocha</h3>
-          <img src="assets/images/mateus.jpg" class="auth_imag" alt="Picture of one of the co-founders: Ian Bertolacci">
+          <img src="assets/images/deadmau5ascii.png" class="auth_imag" alt="Picture of one of the co-founders: Ian Bertolacci">
           <div class="auth_info">
               <p>
                 Mateus Rocha is a student at Colorado State University.

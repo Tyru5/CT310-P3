@@ -17,7 +17,7 @@ function getStatus() {
 	http.onreadystatechange = function() {
 		if (http.readyState == 4 && http.status == 200) {
 			status = JSON.parse( http.responseText );
-			console.log(status);
+			console.log0( status );
 			statusToTable( status );
 		}
 	}
