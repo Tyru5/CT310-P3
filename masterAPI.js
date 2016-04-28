@@ -38,7 +38,7 @@ function getStatus() {
     http.onreadystatechange = function() {
 	if (http.readyState == 4 && http.status == 200) {
 	    status = JSON.parse( http.responseText );
-	    console.log( status );
+	    // console.log( status );
 	    statusToTable( status );
 	   }
     }
@@ -57,18 +57,20 @@ function statusToTable(status) {
     }
 }
 
-function update_status( siteStatus, cr ){ // this will do a cross-domain request... need to do something about this.. issues will arise.
+function update_status( siteStatus, cr ){
   // console.log("this is the siteStatus = " + siteStatus);
+  var awake_status;
   $.ajax({
       type: "GET",
       url: siteStatus,
+      dataType: "json",
       success: function (response) {
-        // console.log(response);
+        console.log(typeof(response.status));
         show_color( response.status, cr );
       },
       error: function (xhr, ajaxOptions, thrownError) {
-        console.log(thrownError);
-        $(cr.cells[3]).css('background-color', 'red');
+        console.log("AJAX call was unsucessful.");
+        $(cr.cells[3]).css('background-color','red');
       }
     });
 
@@ -76,12 +78,15 @@ function update_status( siteStatus, cr ){ // this will do a cross-domain request
 
 
 function show_color(some_response, cr){
-    // console.log(cr.cells);
+    // console.log( some_response );
     if( some_response  == "up"){
       $(cr.cells[3]).css('background-color', 'green'); // table row ID
     }
     if( some_response  == "down" ){
       $(cr.cells[3]).css('background-color', 'yellow'); // table row ID
+    }
+    if(some_response == undefined ){
+      $(cr.cells[3]).css('background-color','red'); // multiple css properties jquery.
     }
 }
 
