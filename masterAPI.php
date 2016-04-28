@@ -1,11 +1,12 @@
+<script type="text/javascript">
 // Tyrus Malmstrom
 //All code to handle the ajax call to the masterAPI page:
 
 var vurl = 'https://www.cs.colostate.edu/~ct310/yr2016sp/more_assignments/project03masterlist.php'; // page that has the master List
 var http = false;
 
-// creating our site into a JSON object: for testing
-var our_siteJSONobj = { "siteName":"tyru5Dan::Pet_Rescue", "awakeURL":"http://www.cs.colostate.edu/~tmalmst/CT310-P3/awake.php", "petsListURL":"http://www.cs.colostate.edu/~tmalmst/CT310-P3/petList.php" };
+//global array to hold the masterListPetData;
+var masterList = new Array();
 
 function ajax_request(){
     // depending on the web browser you are using, return the correct ajax object:
@@ -39,6 +40,8 @@ function getStatus() {
 	if (http.readyState == 4 && http.status == 200) {
 	    status = JSON.parse( http.responseText );
 	    // console.log( status );
+      masterList = status;
+      // console.log( masterList );
 	    statusToTable( status );
 	   }
     }
@@ -65,7 +68,7 @@ function update_status( siteStatus, cr ){
       url: siteStatus,
       dataType: "json",
       success: function (response) {
-        console.log(typeof(response.status));
+        // console.log(typeof(response.status));
         show_color( response.status, cr );
       },
       error: function (xhr, ajaxOptions, thrownError) {
@@ -93,3 +96,8 @@ function show_color(some_response, cr){
 function masterAPI() {
     getStatus();
 }
+</script>
+
+<script type="text/javascript">
+ window.onload = masterAPI;
+</script>

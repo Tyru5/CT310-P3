@@ -8,14 +8,10 @@
       $session_name = "PetRescue_Malmstrom_Bertolacci";
       include 'header.php';
       include 'login_tools.php';
+      // adding the call to the master list api:
+      include 'masterAPI.php';
       require_once 'lib/database.php'; // require all database code.
     ?>
-
-    <!--javaScript to handle the AJAX call to the masterAPI hosted php page -->
-    <script type="text/javascript" src="masterAPI.js"></script>
-    <script type="text/javascript">
-	   window.onload = masterAPI;
-    </script>
 
   </head>
   <body>
@@ -29,7 +25,7 @@
     ?>
 
     <div class="setup_createAccount_header">
-        <h1>Status:</h1>
+        <h1>.:Check out all of the other sites in our Federation:.</h1>
     </div>
 
     <!--Table for displaying the status's of all the other pages-->
