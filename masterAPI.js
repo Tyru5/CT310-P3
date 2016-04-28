@@ -3,7 +3,6 @@
 
 var vurl = 'https://www.cs.colostate.edu/~ct310/yr2016sp/more_assignments/project03masterlist.php'; // page that has the master List
 var http = false;
-var request_awake = false;
 
 // creating our site into a JSON object: for testing
 var our_siteJSONobj = { "siteName":"tyru5Dan::Pet_Rescue", "awakeURL":"http://www.cs.colostate.edu/~tmalmst/CT310-P3/awake.php", "petsListURL":"http://www.cs.colostate.edu/~tmalmst/CT310-P3/petList.php" };
@@ -39,55 +38,50 @@ function getStatus() {
     http.onreadystatechange = function() {
 	if (http.readyState == 4 && http.status == 200) {
 	    status = JSON.parse( http.responseText );
-	    // adding my site into the array:
-	    status[0] = our_siteJSONobj;
 	    console.log( status );
 	    statusToTable( status );
-	}
+	   }
     }
     http.send( null );
-
 }
 
 function statusToTable(status) {
     var tab = document.getElementById('status_table');
     var i = tab.rows.length;
-    // console.log("The length of the status is = " + status.length);
     for (j = 0; j < status.length; j++) {
-	var rt = "<tr> <td>" + status[j].siteName + "</td> <td>" + status[j].awakeURL
-	    + "</td> <td>" + status[j].petsListURL + "</td> <td class=\"statusColor\"></td></tr>";
-	var rr = tab.insertRow(i);
-	rr.innerHTML = rt;
-	update_status( status[j].awakeURL, i );
+	     var rt = "<tr> <td>" + status[j].siteName + "</td> <td>" + status[j].awakeURL
+	      + "</td> <td>" + status[j].petsListURL + "</td> <td></td></tr>";
+	     var rr = tab.insertRow(i);
+	    rr.innerHTML = rt;
+      update_status( status[j].awakeURL, rr )
     }
 }
 
-function update_status( siteStatus , numRows){ // this will do a cross-domain request... need to do something about this.. issues will arise.
-    request_awake = new ajax_request();
-    console.log(request_awake);
-    var awake_url = siteStatus;
-    var response;
-    for(j = 0; j < numRows; j++){
-	request_awake.open("GET", awake_url, true);
-	request_awake.onreadystatechange = function() {
-	    if (request_awake.readyState == 4 && request_awake.status == 200) {
-		response = JSON.parse( request_awake.responseText );
-		console.log( response.status );
-		show_color( response.status);
-	    }
-	}
-	request_awake.send( null );
-    }
+function update_status( siteStatus, cr ){ // this will do a cross-domain request... need to do something about this.. issues will arise.
+  // console.log("this is the siteStatus = " + siteStatus);
+  $.ajax({
+      type: "GET",
+      url: siteStatus,
+      success: function (response) {
+        // console.log(response);
+        show_color( response.status, cr );
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        console.log(thrownError);
+        $(cr.cells[3]).css('background-color', 'red');
+      }
+    });
+
 }
 
 
-function show_color(some_response){
+function show_color(some_response, cr){
+    // console.log(cr.cells);
     if( some_response  == "up"){
-	$('.statusColor').css('background-color', 'green');
-    }else if( some_response  == "down" ){
-	$('.statusColor').css('background-color', 'yellow');
-    }else{
-	$('.statusColor').css('background-color', 'red');
+      $(cr.cells[3]).css('background-color', 'green'); // table row ID
+    }
+    if( some_response  == "down" ){
+      $(cr.cells[3]).css('background-color', 'yellow'); // table row ID
     }
 }
 
