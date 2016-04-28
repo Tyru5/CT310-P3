@@ -1,4 +1,3 @@
-<script type="text/javascript">
 // Tyrus Malmstrom
 //All code to handle the ajax call to the masterAPI page:
 
@@ -6,7 +5,7 @@ var vurl = 'https://www.cs.colostate.edu/~ct310/yr2016sp/more_assignments/projec
 var http = false;
 
 //global array to hold the masterListPetData;
-var masterList = new Array();
+// var masterList = new Array();
 
 function ajax_request(){
     // depending on the web browser you are using, return the correct ajax object:
@@ -39,9 +38,7 @@ function getStatus() {
     http.onreadystatechange = function() {
 	if (http.readyState == 4 && http.status == 200) {
 	    status = JSON.parse( http.responseText );
-	    // console.log( status );
-      masterList = status;
-      // console.log( masterList );
+	    console.log( status );
 	    statusToTable( status );
 	   }
     }
@@ -61,18 +58,17 @@ function statusToTable(status) {
 }
 
 function update_status( siteStatus, cr ){
-  // console.log("this is the siteStatus = " + siteStatus);
-  var awake_status;
+  console.log("this is the siteStatus = " + siteStatus);
   $.ajax({
       type: "GET",
       url: siteStatus,
       dataType: "json",
       success: function (response) {
-        // console.log(typeof(response.status));
+        console.log(typeof(response.status));
         show_color( response.status, cr );
       },
       error: function (xhr, ajaxOptions, thrownError) {
-        console.log("AJAX call was unsucessful.");
+        console.log(xhr.responseText);
         $(cr.cells[3]).css('background-color','red');
       }
     });
@@ -96,8 +92,3 @@ function show_color(some_response, cr){
 function masterAPI() {
     getStatus();
 }
-</script>
-
-<script type="text/javascript">
- window.onload = masterAPI;
-</script>
