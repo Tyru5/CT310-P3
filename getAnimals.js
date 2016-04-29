@@ -56,7 +56,7 @@ function create_list( status ){
   for(var i in status){
     if( status[i].awakeURL == "down" ){
       console.log("in the down awakeURL");
-      return;
+      continue;
     }else{
     str +='<li>' + nameOfDog +status[i].petName + '</li>' +
           '<li>' + datePosted + status[i].datePosted + '</li>' +
