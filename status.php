@@ -8,16 +8,15 @@
       $session_name = "PetRescue_Malmstrom_Bertolacci";
       include 'header.php';
       include 'login_tools.php';
-      require_once 'lib/database.php'; // require all database code.
     ?>
-
-  </head>
-  <body>
 
     <script type="text/javascript" src="masterAPI.js"></script>
     <script type="text/javascript">
       window.onload = masterAPI;
     </script>
+
+  </head>
+  <body>
 
       <div class="pageContents">
 

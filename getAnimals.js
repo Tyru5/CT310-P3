@@ -1,12 +1,30 @@
 // Tyrus Malmstrom :: ajax to process data from petListURL 4/26/2016
 // function to handle all form data: Going to use JQuery.
+// function to create img DOM object:
 
+var masterURL = 'https://www.cs.colostate.edu/~ct310/yr2016sp/more_assignments/project03masterlist.php'; // page that has the master List
 
-function listAnimals(){
+// get the masterList api of sites in the federation:
+function getList(){
+  // JQuery to handle the ajax call:
+  var thePetList;
+  $.ajax({
+      type: "GET",
+      url: masterURL,
+      dataType: "json",
+      success: function (response) {
+        thePetList = ( response );
+        console.log( response );
+        // create_list( response );
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        // console.log(xhr.responseText);
+        console.log("AJAX call failed.");
+      }
+    });
 
 }
 
-// function to create img DOM object:
 function img_create(src, alt, title, clazz, width, height) {
     var img = document.createElement('img');
     img.src= src;
@@ -35,6 +53,5 @@ function create_list( status ){
   $('.pageContents').append(str); //yes!
 }
 
-function init(){
-  listAnimals();
-}
+// Obtaining the list:
+getList();
