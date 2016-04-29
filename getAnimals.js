@@ -43,7 +43,7 @@ function requestPets( currentPetSite ){
       },
       error: function (xhr, ajaxOptions, thrownError) {
         // console.log(xhr.responseText);
-        alert("Second AJAX call failed.");
+        console.log("Second AJAX call failed.");
       }
     });
 }
@@ -54,9 +54,14 @@ function create_list( status ){
   var datePosted = "Date Posted: ";
   var str = '<ul class=animalEntry>';
   for(var i in status){
+    if( status[i].awakeURL == "down" ){
+      console.log("in the down awakeURL");
+      return;
+    }else{
     str +='<li>' + nameOfDog +status[i].petName + '</li>' +
           '<li>' + datePosted + status[i].datePosted + '</li>' +
           '<li><a href=' + status[i].imageURL + '>Click here to view Pet!</a></li><br>';
+        }
   }
   str += '</ul>';
   $('.pageContents').append(str); //yes!
