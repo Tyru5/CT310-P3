@@ -14,29 +14,38 @@ function getList(){
       dataType: "json",
       success: function (response) {
         thePetList = ( response );
-        console.log( response );
-        // create_list( response );
+        // console.log( response );
+        getPetSite( response );
       },
       error: function (xhr, ajaxOptions, thrownError) {
         // console.log(xhr.responseText);
-        console.log("AJAX call failed.");
+        console.log("First AJAX call failed.");
       }
     });
-
 }
 
-function img_create(src, alt, title, clazz, width, height) {
-    var img = document.createElement('img');
-    img.src= src;
-    img.className = clazz;
-    img.width = width;
-    img.height = height;
-    if (alt!=null) img.alt= alt;
-    if (title!=null) img.title= title;
-    img.onload = function(){
-      img.src = src;
-      $(".picyo").html(img);
-    }
+
+function getPetSite( petSite ){
+  for(var i in petSite){
+    requestPets(petSite[i].petsListURL);
+  }
+}
+
+function requestPets( currentPetSite ){
+  $.ajax({
+      type: "GET",
+      url: currentPetSite,
+      dataType: "json",
+      success: function (response) {
+        thePetList = ( response );
+        // console.log( response );
+        create_list( response );
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        // console.log(xhr.responseText);
+        alert("Second AJAX call failed.");
+      }
+    });
 }
 
 // function to create the list for each animal:
