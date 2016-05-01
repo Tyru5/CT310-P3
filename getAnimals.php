@@ -1,3 +1,4 @@
+<script type="text/javascript">
 // Tyrus Malmstrom :: ajax to process data from petListURL 4/26/2016
 // function to handle all form data: Going to use JQuery.
 // function to create img DOM object:
@@ -60,7 +61,7 @@ function create_list( status ){
     }else{
     str +='<li>' + nameOfDog +status[i].petName + '</li>' +
           '<li>' + datePosted + status[i].datePosted + '</li>' +
-          '<li><a href=' + status[i].imageURL + '>Click here to view Pet!</a></li><br>';
+          '<li><a href= animal_view.php?id=' + status[i].petId + '>Click here to view Pet!</a></li><br>';
         }
   }
   str += '</ul>';
@@ -69,3 +70,4 @@ function create_list( status ){
 
 // Obtaining the list:
 getList();
+</script

@@ -8,7 +8,7 @@
       $session_name = "PetRescue_Malmstrom_Bertolacci";
       include 'header.php';
       include "animal_tools.php";
-	  include "lib/database.php";
+	    include "lib/database.php";
 
       if( isset($_POST['COMMENT_SUBMIT']) ){
         $_GET['id']=$_POST['origin_get_id'];
@@ -32,22 +32,25 @@
 	  */
 
       if( isset($_POST['COMMENT_SUBMIT']) ){
-		foreach ($result as $row)
-		{
+		      foreach ($result as $row){
 
-		// addComment sanitizes text input
-		$filtered_comment = filter_var($_POST['comment_content'], FILTER_SANITIZE_STRING);
-		$date = date('l jS \of F Y h:i:s A');
-		$complete_comment = $row['pet_comments']."User ".$_SESSION['USERNAME']." posted on ".$date.": <br>".$filtered_comment."<br><br>";
-        $sql_pet = "UPDATE animals SET pet_comments = '$complete_comment' WHERE id =".$_GET['id'];
-		$db->query($sql_pet);
-        //header( 'Location: animal_view.php?id='.$_GET['id'] ); // redirects the user to the page with the specifed ID towards that animal
+		          // addComment sanitizes text input
+		            $filtered_comment = filter_var($_POST['comment_content'], FILTER_SANITIZE_STRING);
+		            $date = date('l jS \of F Y h:i:s A');
+		            $complete_comment = $row['pet_comments']."User ".$_SESSION['USERNAME']." posted on ".$date.": <br>".$filtered_comment."<br><br>";
+                $sql_pet = "UPDATE animals SET pet_comments = '$complete_comment' WHERE id =".$_GET['id'];
+		              $db->query($sql_pet);
+                  //header( 'Location: animal_view.php?id='.$_GET['id'] ); // redirects the user to the page with the specifed ID towards that animal
 
-		}
-      }
-
+		              }
+                }
     ?>
+
+    <!--code to get the image from the site-->
+    <script type="text/javascript" src="viewAnimal.js"></script>
+
   </head>
+
   <body>
     <div class="pageContents"> <!-- Will hold all the page contents -->
       <?php
@@ -57,7 +60,8 @@
 
       ?>
       <?php
-	  $query = "SELECT * FROM animals WHERE id=".$_GET['id'].";";
+    // PROJECT 2 CODE
+	  /*$query = "SELECT * FROM animals WHERE id=".$_GET['id'].";";
 		$result = $db->query($query);
 
 
@@ -96,6 +100,8 @@
         echo "</div>"
 		*/
       ?>
+
+      <div id="picyo"></div>
 
       <?php
         $valid_login = isset($_SESSION['USERNAME']);

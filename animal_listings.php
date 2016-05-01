@@ -7,13 +7,11 @@
       $title = "Adopt";
       $session_name = "PetRescue_Malmstrom_Bertolacci";
       include 'header.php';
+      // including the getAnimal code:
+      include 'getAnimals.php';
 	    include 'lib/database.php';
       include "animal_tools.php";
     ?>
-
-    <!--loading the getAnimal file to process/list the animals:-->
-    <script type="text/javascript" src="getAnimals.js"></script>
-
 
     <!--All code for the AJAX call to the database-->
     <script type="text/javascript">
@@ -59,6 +57,7 @@
           <div id="livesearch"></div>
       </form>
       <?php
+      // PROJECT 2 CODE::
 		/*$db = new database();
 	  $result = $db->query('SELECT * FROM animals');
 
