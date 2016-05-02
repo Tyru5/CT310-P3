@@ -8,13 +8,11 @@ var masterURL = 'https://www.cs.colostate.edu/~ct310/yr2016sp/more_assignments/p
 // get the masterList api of sites in the federation:
 function getList(){
   // JQuery to handle the ajax call:
-  var thePetList;
   $.ajax({
       type: "GET",
       url: masterURL,
       dataType: "json",
       success: function (response) {
-        thePetList = ( response );
         // console.log( response );
         getPetSite( response );
       },
@@ -38,7 +36,6 @@ function requestPets( currentPetSite ){
       url: currentPetSite,
       dataType: "json",
       success: function (response) {
-        thePetList = ( response );
         // console.log( response );
         create_list( response );
       },
@@ -58,6 +55,7 @@ function create_list( status ){
   var str = '<ul class=animalEntry>';
   for(var i in status){
     if( status[i].awakeURL == "down" ){
+      console.log(status[i].awakeURL);
       console.log("in the down awakeURL");
       continue;
     }else{

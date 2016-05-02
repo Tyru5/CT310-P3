@@ -4,7 +4,7 @@
 function displayImage(){
 var test = getQueryVariable("imageURL");
 var finalTest = test + "=" +  getQueryVariable("id");
-console.log( finalTest ); 
+console.log( finalTest );
 jQuery.ajax({
     type: "GET",
     url: finalTest,
@@ -25,14 +25,14 @@ jQuery.ajax({
 function displayDesc() {
 var test = getQueryVariable("descURL");
 var finalTest = test + "=" +  getQueryVariable("id");
-console.log( finalTest ); 
+console.log( finalTest );
     jQuery.ajax({
           type: "GET",
           url: finalTest,
-          dataType: "html",
+          dataType: "json",
           success: function (response) {
             console.log( response );
-            jQuery("#desc").html(response);
+            jQuery("#desc").html(response.description);
             // alert("Details saved successfully!!!");
           },
           error: function (xhr, ajaxOptions, thrownError) {
@@ -52,10 +52,6 @@ function getQueryVariable(variable){
        }
        return(false);
 }
-
-// testing the getQueryVariable function:
-// console.log( getQueryVariable("imageURL") );
-// console.log( getQueryVariable("descURL") );
 
 // calling the functions:
 displayImage();
