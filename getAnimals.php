@@ -65,7 +65,7 @@ function create_list( status ){
           '<li>' + kindOfPet +status[i].petKind + '</li>' +
           '<li>' + breed +status[i].breed + '</li>' +
           '<li>' + datePosted + status[i].datePosted + '</li>' +
-          '<li><a href= animal_view.php?id=' + status[i].petId + '&imageURL=' + status[i].imageURL + '&petKind=' + status[i].petKind + '>Click here to view Pet!</a></li><br>';
+          '<li><a href= animal_view.php?id=' + status[i].petId + '&imageURL=' + status[i].imageURL + '&descURL=' + status[i].descURL + '>Click here to view Pet!</a></li><br>';
           // '&descURL=' + status[i].descURL + '&petName=' + status[i].petName + '&petKind=' + status[i].petKind
         }
   }
