@@ -404,6 +404,6 @@ input[type=submit]{ /*button for the 'post' comment*/
 }
 
 .animalPhoto {
-    height: 320;
-    width: 240;
+    height: 320px;
+    width: 240px;
 }
