@@ -5,7 +5,6 @@ function displayImage(){
 jQuery.ajax({
       type: "GET",
       url: getQueryVariable("imageURL"),
-      dataType: "html",
       success: function (response) {
         console.log( response );
         var src = "data:image/jpg;base64,"+response;
@@ -13,8 +12,7 @@ jQuery.ajax({
         // alert("Details saved successfully!!!");
       },
       error: function (xhr, ajaxOptions, thrownError) {
-        alert( xhr.status );
-        alert( thrownError );
+        console.log( xhr.status );
       }
     });
 }
@@ -31,8 +29,7 @@ function displayDesc() {
             // alert("Details saved successfully!!!");
           },
           error: function (xhr, ajaxOptions, thrownError) {
-            alert( xhr.status );
-            alert( thrownError );
+            console.log( xhr.status );
           }
         });
 }
@@ -51,8 +48,10 @@ function getQueryVariable(variable){
 
 // testing the getQueryVariable function:
 console.log( getQueryVariable("imageURL") );
+var test = getQueryVariable("imageURL");
+var finalTest = test + getQueryVariable("id");
 console.log( getQueryVariable("descURL") );
 
 // calling the functions:
-displayImage();
-displayDesc();
+// displayImage();
+// displayDesc();
