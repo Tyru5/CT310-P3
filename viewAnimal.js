@@ -51,6 +51,7 @@ function getQueryVariable(variable){
 
 // testing the getQueryVariable function:
 console.log( getQueryVariable("imageURL") );
+console.log( getQueryVariable("descURL") );
 
 // calling the functions:
 displayImage();
