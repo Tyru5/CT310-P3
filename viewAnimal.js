@@ -49,6 +49,9 @@ function getQueryVariable(variable){
        return(false);
 }
 
+// testing the getQueryVariable function:
+console.log( getQueryVariable("imageURL") );
+
 // calling the functions:
 displayImage();
 displayDesc();
