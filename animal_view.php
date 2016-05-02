@@ -102,6 +102,7 @@
       ?>
 
       <div id="picyo"></div>
+      <div id="desc"></div>
 
       <?php
         $valid_login = isset($_SESSION['USERNAME']);
