@@ -10,6 +10,7 @@ $dbh = new database();
 $animalQuery = $dbh->query("SELECT pet_image_path FROM animals WHERE id= '$id'");
 $res = $animalQuery->fetchColumn();
 // var_dump($res);
-echo base64_encode($res);
+$str = file_get_contents($res, FILE_USE_INCLUDE_PATH);
+echo base64_encode($str);
 exit;
 ?>
