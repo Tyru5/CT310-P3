@@ -54,6 +54,7 @@ function create_list( status ){
   var nameOfDog = "Name: ";
   var kindOfPet = "Pet Kind: ";
   var datePosted = "Date Posted: ";
+  var breed = "Pet breed: ";
   var str = '<ul class=animalEntry>';
   for(var i in status){
     if( status[i].awakeURL == "down" ){
@@ -62,6 +63,7 @@ function create_list( status ){
     }else{
     str +='<li>' + nameOfDog +status[i].petName + '</li>' +
           '<li>' + kindOfPet +status[i].petKind + '</li>' +
+          '<li>' + breed +status[i].breed + '</li>' +
           '<li>' + datePosted + status[i].datePosted + '</li>' +
           '<li><a href= animal_view.php?id=' + status[i].petId + '>Click here to view Pet!</a></li><br>';
         }
