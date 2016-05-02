@@ -402,3 +402,8 @@ input[type=submit]{ /*button for the 'post' comment*/
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#003f7f", endColorstr="#003f7f");	background: -o-linear-gradient(top,#003f7f,003f7f);
 	background-color:#003f7f;
 }
+
+.animalPhoto {
+    height: 320;
+    width: 240;
+}
