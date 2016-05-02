@@ -2,9 +2,13 @@
 
 // Function to get the image from the AJAX call:
 function displayImage(){
+var test = getQueryVariable("imageURL");
+var finalTest = test + "=" +  getQueryVariable("id");
+console.log( finalTest ); 
 jQuery.ajax({
-      type: "GET",
-      url: getQueryVariable("imageURL"),
+    type: "GET",
+    url: finalTest,
+    dataType: "html",
       success: function (response) {
         console.log( response );
         var src = "data:image/jpg;base64,"+response;
@@ -12,16 +16,19 @@ jQuery.ajax({
         // alert("Details saved successfully!!!");
       },
       error: function (xhr, ajaxOptions, thrownError) {
-        console.log( xhr.status );
+        console.log("couldn't retrive the image");
       }
     });
 }
 
 // function to get the description of the animal from the AJAX call:
 function displayDesc() {
+var test = getQueryVariable("descURL");
+var finalTest = test + "=" +  getQueryVariable("id");
+console.log( finalTest ); 
     jQuery.ajax({
           type: "GET",
-          url: getQueryVariable("descURL"),
+          url: finalTest,
           dataType: "html",
           success: function (response) {
             console.log( response );
@@ -47,11 +54,9 @@ function getQueryVariable(variable){
 }
 
 // testing the getQueryVariable function:
-console.log( getQueryVariable("imageURL") );
-var test = getQueryVariable("imageURL");
-var finalTest = test + getQueryVariable("id");
-console.log( getQueryVariable("descURL") );
+// console.log( getQueryVariable("imageURL") );
+// console.log( getQueryVariable("descURL") );
 
 // calling the functions:
-// displayImage();
-// displayDesc();
+displayImage();
+displayDesc();
