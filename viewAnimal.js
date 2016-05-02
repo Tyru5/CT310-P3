@@ -10,7 +10,6 @@ jQuery.ajax({
         console.log( response );
         var src = "data:image/jpg;base64,"+response;
         jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img id = \"source_img\" src\= "+src+" /></h2>");
-        clear();
         // alert("Details saved successfully!!!");
       },
       error: function (xhr, ajaxOptions, thrownError) {
@@ -29,7 +28,6 @@ function displayDesc() {
           success: function (response) {
             console.log( response );
             jQuery("#desc").html(response);
-            clear();
             // alert("Details saved successfully!!!");
           },
           error: function (xhr, ajaxOptions, thrownError) {

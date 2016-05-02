@@ -8,7 +8,7 @@
       $session_name = "PetRescue_Malmstrom_Bertolacci";
       include 'header.php';
       include "animal_tools.php";
-	    include "lib/database.php";
+	  include "lib/database.php";
 
       if( isset($_POST['COMMENT_SUBMIT']) ){
         $_GET['id']=$_POST['origin_get_id'];
