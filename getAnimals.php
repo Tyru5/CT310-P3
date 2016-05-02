@@ -23,7 +23,7 @@ function getList(){
     });
 }
 
-
+// function to get the petListURL:
 function getPetSite( petSite ){
   for(var i in petSite){
     requestPets(petSite[i].petsListURL);
@@ -54,18 +54,12 @@ function create_list( status ){
   var breed = "Pet breed: ";
   var str = '<ul class=animalEntry>';
   for(var i in status){
-    if( status[i].awakeURL == "down" ){
-      console.log(status[i].awakeURL);
-      console.log("in the down awakeURL");
-      continue;
-    }else{
     str +='<li>' + nameOfDog +status[i].petName + '</li>' +
           '<li>' + kindOfPet +status[i].petKind + '</li>' +
           '<li>' + breed +status[i].breed + '</li>' +
           '<li>' + datePosted + status[i].datePosted + '</li>' +
           '<li><a href= animal_view.php?id=' + status[i].petId + '&imageURL=' + status[i].imageURL + '&descURL=' + status[i].descURL + '>Click here to view Pet!</a></li><br>';
           // '&descURL=' + status[i].descURL + '&petName=' + status[i].petName + '&petKind=' + status[i].petKind
-        }
   }
   str += '</ul>';
   $('.pageContents').append(str); //yes!
