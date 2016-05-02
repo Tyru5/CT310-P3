@@ -52,6 +52,7 @@ function requestPets( currentPetSite ){
 // function to create the list for each animal:
 function create_list( status ){
   var nameOfDog = "Name: ";
+  var kindOfPet = "Pet Kind: ";
   var datePosted = "Date Posted: ";
   var str = '<ul class=animalEntry>';
   for(var i in status){
@@ -60,6 +61,7 @@ function create_list( status ){
       continue;
     }else{
     str +='<li>' + nameOfDog +status[i].petName + '</li>' +
+          '<li>' + kindOfPet +status[i].petKind + '</li>' +
           '<li>' + datePosted + status[i].datePosted + '</li>' +
           '<li><a href= animal_view.php?id=' + status[i].petId + '>Click here to view Pet!</a></li><br>';
         }
