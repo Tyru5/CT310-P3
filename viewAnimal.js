@@ -50,3 +50,7 @@ function getQueryVariable(variable){
        }
        return(false);
 }
+
+// calling the functions:
+displayImage();
+displayDesc();
