@@ -12,7 +12,8 @@ jQuery.ajax({
       success: function (response) {
         alert( response );
         var src = "data:image/jpg;base64,"+response;
-        console.log( src );
+        var finalSrc = src.replace("\n","");
+        console.log( finalSrc );
         jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img class = \"animalPhoto\" src\= "+src+" /></h2>");
         // alert("Details saved successfully!!!");
       },
