@@ -102,6 +102,12 @@
       ?>
 
       <div id="picyo"></div>
+      <div class="detailsFormat">
+        <div id="petName"></div>
+        <div id="petKind"></div>
+        <div id="breed"></div>
+        <div id="datePosted"></div>
+    </div>
       <div id="desc"></div>
 
       <?php
@@ -115,9 +121,9 @@
           <input type="hidden" name="origin_get_id" value=<?php echo "\"".$_GET['id']."\"" ?> >
           <input type="submit" value="Post">
         </form>
-		<p>You are logged in as <?php echo $_SESSION['USERNAME'] ?></p>
+		    <p>You are logged in as <?php echo $_SESSION['USERNAME'] ?></p>
       <?php else: ?>
-        <p> You are not logged in. Only logged users can post comments. </p>
+        <p> You are <strong>not</strong> logged in. Only logged users can post comments. </p>
 		<?php endif;
       ?>
 

@@ -406,4 +406,13 @@ input[type=submit]{ /*button for the 'post' comment*/
 .animalPhoto {
     height: 320px;
     width: 240px;
+    margin-left: 15px;
+}
+
+#desc {
+  margin-left: 15px;
+}
+
+.detailsFormat {
+  margin-left: 15px;
 }

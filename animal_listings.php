@@ -8,7 +8,6 @@
       $session_name = "PetRescue_Malmstrom_Bertolacci";
       include 'header.php';
       // including the getAnimal code:
-      include 'getAnimals.php';
 	    include 'lib/database.php';
       include "animal_tools.php";
     ?>
@@ -41,6 +40,10 @@
         xmlhttp.send(null);
     }
     </script>
+
+    <!--Project 3::Adding the getAnimal.js code to process the animal-->
+    <script type="text/javascript" src="getAnimals.js"></script>
+
   </head>
 
   <body>

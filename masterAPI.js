@@ -63,7 +63,8 @@ function update_status( siteStatus, cr ){
   // console.log("this is the siteStatus = " + siteStatus);
   $.ajax({
       type: "GET",
-      url: siteStatus, // CHANGED THIS! DIDN'T HAVE TO SPECIFY THE dataType TO JSON...
+      url: siteStatus,
+      // dataType: "json", ???????????????
       success: function (response) {
         // console.log(typeof(response.status));
         show_color( response.status, cr );
