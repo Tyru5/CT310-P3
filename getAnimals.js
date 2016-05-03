@@ -57,8 +57,8 @@ function create_list( status ){
           '<li>' + kindOfPet +status[i].petKind + '</li>' +
           '<li>' + breed +status[i].breed + '</li>' +
           '<li>' + datePosted + status[i].datePosted + '</li>' +
-          '<li><a href= animal_view.php?id=' + status[i].petId + '&imageURL=' + status[i].imageURL + '&descURL=' + status[i].descURL + '&petName=' + status[i].petName.replace(" ","_") +
-                    '&breed=' + status[i].breed.replace(" ","_") + '&petKind=' + status[i].petKind.replace(" ","_") + '&datePosted=' + status[i].datePosted + '>Click here to view Pet!</a></li><br>';
+          '<li><a href= animal_view.php?id=' + status[i].petId + '&imageURL=' + status[i].imageURL + '&descURL=' + status[i].descURL + '&petName=' + status[i].petName.split(' ').join('_') +
+                    '&breed=' + status[i].breed.split(' ').join('+') + '&petKind=' + status[i].petKind.split(' ').join('+') + '&datePosted=' + status[i].datePosted + '>Click here to view Pet!</a></li><br>';
   }
   str += '</ul>';
   $('.pageContents').append(str); //yes!
