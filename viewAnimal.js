@@ -67,10 +67,6 @@ var finalTest = test + "=" +  getQueryVariable("id");
           success: function (response) {
             // console.log( response );
             jQuery("#desc").html( title +  response.description);
-            displayPetName();
-            displayPetKind();
-            displayPetBreed();
-            displayDatePosted();
             // alert("Details saved successfully!!!");
           },
           error: function (xhr, ajaxOptions, thrownError) {
@@ -94,3 +90,10 @@ function getQueryVariable(variable){
 // calling the functions:
 displayImage();
 displayDesc();
+
+function displayDets(){
+  displayPetName();
+  displayPetBreed();
+  displayPetKind();
+  displayDatePosted();
+}

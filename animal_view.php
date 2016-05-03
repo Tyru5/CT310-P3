@@ -48,6 +48,9 @@
 
     <!--code to get the image from the site-->
     <script type="text/javascript" src="viewAnimal.js"></script>
+    <script type="text/javascript">
+      window.onload = displayDets;
+    </script>
 
   </head>
 
@@ -104,8 +107,8 @@
       <div id="picyo"></div>
       <div class="detailsFormat">
         <div id="petName"></div>
-        <div id="petKind"></div>
         <div id="breed"></div>
+        <div id="petKind"></div>
         <div id="datePosted"></div>
     </div>
       <div id="desc"></div>
