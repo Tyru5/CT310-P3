@@ -83,24 +83,45 @@ function displayDatePosted(){
 
 // function to get the description of the animal from the AJAX call:
 function displayDesc() {
-var title = "<h3>Description:</h3> \n";
-var test = getQueryVariable("descURL");
-var finalTest = test + "=" +  getQueryVariable("id");
-var finalFinalTest = finalTest.replace("https","http"); // get rid of the https...
-// console.log( finalTest );
+  if( ianGetQueryVariable().includes("~ibertola") ){
+    var title = "<h3>Description:</h3> \n";
+    var hisId = getQueryVariable("id");
+    console.log( hisId );
     jQuery.ajax({
-          type: "GET",
-          url: finalFinalTest,
-          dataType: "json",
+        type: "GET",
+        url: "http://www.cs.colostate.edu/~ibertola/ct310/P3-dev/services/animal_service.php?SERVICE=GET_DESCRIPTION&ID=" + hisId,
+        dataType: "json",
           success: function (response) {
-            // console.log( response );
-            jQuery("#desc").html( title +  response.description);
+            // alert( response );
+            console.log( response );
+            jQuery("#desc").html( title +  response.desciption); // haha they spell this wrong as well....
             // alert("Details saved successfully!!!");
           },
           error: function (xhr, ajaxOptions, thrownError) {
             console.log( xhr.status );
           }
         });
+  }
+  else{
+    var title = "<h3>Description:</h3> \n";
+    var test = getQueryVariable("descURL");
+    var finalTest = test + "=" +  getQueryVariable("id");
+    var finalFinalTest = finalTest.replace("https","http"); // get rid of the https...
+    // console.log( finalTest );
+      jQuery.ajax({
+            type: "GET",
+            url: finalFinalTest,
+            dataType: "json",
+            success: function (response) {
+              // console.log( response );
+              jQuery("#desc").html( title +  response.description);
+              // alert("Details saved successfully!!!");
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+              console.log( xhr.status );
+            }
+          });
+        }
 }
 
 
