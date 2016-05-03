@@ -64,7 +64,7 @@ function update_status( siteStatus, cr ){
   $.ajax({
       type: "GET",
       url: siteStatus,
-      // dataType: "json", ???????????????
+      dataType: "json",
       success: function (response) {
         // console.log(typeof(response.status));
         show_color( response.status, cr );
