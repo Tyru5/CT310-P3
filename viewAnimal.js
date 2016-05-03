@@ -12,7 +12,7 @@ jQuery.ajax({
       success: function (response) {
         alert( response );
         var src = "data:image/jpg;base64,"+response;
-        var finalSrc = src.replace("\n\r","");
+        var finalSrc = src.replace(/[\n\r]+/g,"");
         console.log( finalSrc );
         jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img class = \"animalPhoto\" src\= "+src+" /></h2>");
         // alert("Details saved successfully!!!");
