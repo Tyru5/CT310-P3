@@ -14,7 +14,7 @@ jQuery.ajax({
         var src = "data:image/jpg;base64,"+response;
         var finalSrc = src.replace(/[\n\r]+/g,"");
         console.log( finalSrc );
-        jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img class = \"animalPhoto\" src\= "+src+" /></h2>");
+        jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img class = \"animalPhoto\" src\= "+finalSrc+" /></h2>");
         // alert("Details saved successfully!!!");
       },
       error: function (xhr, ajaxOptions, thrownError) {
