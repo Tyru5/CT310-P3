@@ -4,10 +4,11 @@
 function displayImage(){
 var test = getQueryVariable("imageURL");
 var finalTest = test + "=" +  getQueryVariable("id");
+var finalFinalTest = finalTest.replace("https","http"); // get rid of the https...
 console.log( finalTest );
 jQuery.ajax({
     type: "GET",
-    url: finalTest,
+    url: finalFinalTest,
     dataType: "html",
       success: function (response) {
         // alert( response );
@@ -61,10 +62,11 @@ function displayDesc() {
 var title = "<h3>Description:</h3> \n";
 var test = getQueryVariable("descURL");
 var finalTest = test + "=" +  getQueryVariable("id");
+var finalFinalTest = finalTest.replace("https","http"); // get rid of the https...
 // console.log( finalTest );
     jQuery.ajax({
           type: "GET",
-          url: finalTest,
+          url: finalFinalTest,
           dataType: "json",
           success: function (response) {
             // console.log( response );
