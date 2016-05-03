@@ -10,10 +10,10 @@ jQuery.ajax({
     url: finalTest,
     dataType: "html",
       success: function (response) {
-        alert( response );
+        // alert( response );
         var src = "data:image/jpg;base64,"+response;
         var finalSrc = src.replace(/[\n\r]+/g,"");
-        console.log( finalSrc );
+        // console.log( finalSrc );
         jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img class = \"animalPhoto\" src\= "+finalSrc+" /></h2>");
         // alert("Details saved successfully!!!");
       },
