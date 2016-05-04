@@ -416,3 +416,9 @@ input[type=submit]{ /*button for the 'post' comment*/
 .detailsFormat {
   margin-left: 15px;
 }
+
+.ajaxError {
+	color: red;
+	font-weight: bold;
+  margin-top: 0;
+}

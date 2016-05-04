@@ -18,7 +18,8 @@ function displayImage(){
             // alert("Details saved successfully!!!");
           },
           error: function (xhr, ajaxOptions, thrownError) {
-            console.log("couldn't retrive the image");
+            // letting the user know that the picture is of the wrong data type:
+            jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img class = \"animalPhoto\" src=\"error-1349562_640.png\"/></h2>");
           }
         });
   }
@@ -41,7 +42,7 @@ function displayImage(){
         // alert("Details saved successfully!!!");
       },
       error: function (xhr, ajaxOptions, thrownError) {
-        console.log("couldn't retrive the image");
+        jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img class = \"animalPhoto\" src=\"error-1349562_640.png\"/></h2>");
       }
     });
   }
@@ -98,7 +99,7 @@ function displayDesc() {
             // alert("Details saved successfully!!!");
           },
           error: function (xhr, ajaxOptions, thrownError) {
-            console.log( xhr.status );
+            jQuery("#desc").html( title + "<p class=\"ajaxError\">Error. Probably wrong dataType</p>");
           }
         });
   }
@@ -118,7 +119,7 @@ function displayDesc() {
               // alert("Details saved successfully!!!");
             },
             error: function (xhr, ajaxOptions, thrownError) {
-              console.log( xhr.status );
+              jQuery("#desc").html( title + "<p class=\"ajaxError\">Error. Probably wrong dataType</p>");
             }
           });
         }
