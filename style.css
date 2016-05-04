@@ -422,3 +422,7 @@ input[type=submit]{ /*button for the 'post' comment*/
 	font-weight: bold;
   margin-top: 0;
 }
+
+#go_back {
+  color: #2e3436;
+}

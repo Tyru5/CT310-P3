@@ -132,7 +132,7 @@
 
     </div>
 
-	<p id="go_back"><a href="animal_listings.php">Go back</a></p>
+	<p><a id="go_back" href="animal_listings.php">Go back</a></p>
     <?php include 'footer.php'; ?>
   </body>
 </html>
