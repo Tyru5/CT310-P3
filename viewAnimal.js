@@ -14,7 +14,7 @@ function displayImage(){
             var src = "data:image/jpg;base64,"+response;
             var finalSrc = src.replace(/[\n\r]+/g,"");
             // console.log( finalSrc );
-            jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br> <object data=\"assets/images/error_ajax.png\" type=\"image/png\"><img class = \"animalPhoto\" src\= "+finalSrc+" /></h2></object>");
+            jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br> <object data\= "+finalSrc+" type=\"image/jpg\" class=\"animalPhoto\"><img src=\"assets/images/error_ajax.png\"/></h2></object>");
             // alert("Details saved successfully!!!");
           },
           error: function (xhr, ajaxOptions, thrownError) {
@@ -38,7 +38,7 @@ function displayImage(){
         var src = "data:image/jpg;base64,"+response;
         var finalSrc = src.replace(/[\n\r]+/g,"");
         // console.log( finalSrc );
-        jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br> <object data=\"assets/images/error_ajax.png\" type=\"image/png\"><img class = \"animalPhoto\" src\= "+finalSrc+" /></h2></object>");
+        jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br> <object data\= "+finalSrc+" type=\"image/jpg\" class=\"animalPhoto\"><img src=\"assets/images/error_ajax.png\"/></h2></object>");
         // alert("Details saved successfully!!!");
       },
       error: function (xhr, ajaxOptions, thrownError) {
