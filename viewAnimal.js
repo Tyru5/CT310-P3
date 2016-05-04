@@ -14,12 +14,12 @@ function displayImage(){
             var src = "data:image/jpg;base64,"+response;
             var finalSrc = src.replace(/[\n\r]+/g,"");
             // console.log( finalSrc );
-            jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img class = \"animalPhoto\" src\= "+finalSrc+" /></h2>");
+            jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br> <object data=\"assets/images/error_ajax.png\" type=\"image/png\"><img class = \"animalPhoto\" src\= "+finalSrc+" /></h2></object>");
             // alert("Details saved successfully!!!");
           },
           error: function (xhr, ajaxOptions, thrownError) {
             // letting the user know that the picture is of the wrong data type:
-            jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img class = \"animalPhoto\" src=\"error-1349562_640.png\"/></h2>");
+            jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img class = \"animalPhoto\" src=\"assets/images/error_ajax.png\"/></h2>");
           }
         });
   }
@@ -38,7 +38,7 @@ function displayImage(){
         var src = "data:image/jpg;base64,"+response;
         var finalSrc = src.replace(/[\n\r]+/g,"");
         // console.log( finalSrc );
-        jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br>\<img class = \"animalPhoto\" src\= "+finalSrc+" /></h2>");
+        jQuery("#picyo").html("<h2 id = \"image_header\"> Image: <br> <object data=\"assets/images/error_ajax.png\" type=\"image/png\"><img class = \"animalPhoto\" src\= "+finalSrc+" /></h2></object>");
         // alert("Details saved successfully!!!");
       },
       error: function (xhr, ajaxOptions, thrownError) {
