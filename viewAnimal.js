@@ -95,7 +95,7 @@ function displayDesc() {
           success: function (response) {
             // alert( response );
             console.log( response );
-            jQuery("#desc").html( title +  response.desciption); // haha they spell this wrong as well....
+            jQuery("#desc").html( title +  response.description);
             // alert("Details saved successfully!!!");
           },
           error: function (xhr, ajaxOptions, thrownError) {
