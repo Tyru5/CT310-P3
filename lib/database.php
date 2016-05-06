@@ -65,7 +65,7 @@ class database extends PDO{
       		$key = str_shuffle("1337abcdegTYUIOML:.,//??QQWeerrn");
       		// saving key to a session variable for further client checking:
       		$_SESSION['current_key'] = $key;
-      		$content = "Follow this link to reset your password: \n " . "https://".$_SERVER['HTTP_HOST']."/~tmalmst/CT310-3/passwordreset.php"."?key=$key"; // had to change the absolute path when I removed one of the unessecary folders.
+      		$content = "Follow this link to reset your password: \n " . "https://".$_SERVER['HTTP_HOST']."/~tmalmst/CT310-P3/passwordreset.php"."?key=$key"; // had to change the absolute path when I removed one of the unessecary folders.
       		// echo "<br>\n";
       		// echo $content;
       		error_reporting(E_ALL);
