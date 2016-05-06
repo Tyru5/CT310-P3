@@ -10,9 +10,9 @@ $animalArray[$i++] = array(
   "petKind" =>  "Mammal",
   "breed"   =>  "Pitbull",
   "datePosted" => "04/29/2016",
-  "imageURL" =>  "https://www.cs.colostate.edu/~tmalmst/CT310-P3/getImage.php?petId=1",
+  "imageURL" =>  "http://www.cs.colostate.edu/~tmalmst/CT310-P3/getImage.php?petId=1",
   "petId"   =>  "1",
-  "descURL" =>  "https://www.cs.colostate.edu/~tmalmst/CT310-P3/getDesc.php?petId=1",
+  "descURL" =>  "http://www.cs.colostate.edu/~tmalmst/CT310-P3/getDesc.php?petId=1",
 
 );
 
@@ -22,9 +22,9 @@ $animalArray[$i++] = array(
   "petKind" =>  "Mammal",
   "breed"   =>  "cutest kittie",
   "datePosted" => "04/25/2016",
-  "imageURL" =>  "https://www.cs.colostate.edu/~tmalmst/CT310-P3/getImage.php?petId=2",
+  "imageURL" =>  "http://www.cs.colostate.edu/~tmalmst/CT310-P3/getImage.php?petId=2",
   "petId"   =>  "2",
-  "descURL" =>  "https://www.cs.colostate.edu/~tmalmst/CT310-P3/getDesc.php?petId=2",
+  "descURL" =>  "http://www.cs.colostate.edu/~tmalmst/CT310-P3/getDesc.php?petId=2",
 
 );
 
@@ -34,9 +34,9 @@ $animalArray[$i++] = array(
   "petKind" =>  "Mammal",
   "breed"   =>  "cuter kittie",
   "datePosted" => "04/20/2016",
-  "imageURL" =>  "https://www.cs.colostate.edu/~tmalmst/CT310-P3/getImage.php?petId=3",
+  "imageURL" =>  "http://www.cs.colostate.edu/~tmalmst/CT310-P3/getImage.php?petId=3",
   "petId"   =>  "3",
-  "descURL" =>  "https://www.cs.colostate.edu/~tmalmst/CT310-P3/getDesc.php?petId=3",
+  "descURL" =>  "http://www.cs.colostate.edu/~tmalmst/CT310-P3/getDesc.php?petId=3",
 
 
 );
@@ -47,9 +47,9 @@ $animalArray[$i++] = array(
   "petKind" =>  "na",
   "breed"   =>  "na",
   "datePosted" => "04/30/2038", // end of the world!
-  "imageURL" =>  "https://www.cs.colostate.edu/~tmalmst/CT310-P3/getImage.php?petId=4",
+  "imageURL" =>  "http://www.cs.colostate.edu/~tmalmst/CT310-P3/getImage.php?petId=4",
   "petId"   =>  "4",
-  "descURL" =>  "https://www.cs.colostate.edu/~tmalmst/CT310-P3/getDesc.php?petId=4",
+  "descURL" =>  "http://www.cs.colostate.edu/~tmalmst/CT310-P3/getDesc.php?petId=4",
 
 );
 
